@@ -29,7 +29,7 @@
         const fetchImages = async () => {
             await fetch('https://jsonplaceholder.typicode.com/photos')
             .then((response) => response.json())
-            .then((res) => photos.update(item => [...item, ...res.slice(0, 100)]));
+            .then((res) => photos.update(item => [...item, ...res.slice(0, 50)]));
         };
 
         fetchImages()
